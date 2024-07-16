@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    font-family: 'Merriweather', 'sans-serif';
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("Images/man-8060589_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.container {
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 50vw;
+    height: 800px;
+    margin: 30px;
+    padding: 10px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1); 
+    border-top: 0.5px solid rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+
+
+}
+
+.container h1 {
+    text-shadow: 2px 2px 2px #030303;
+    font-style: italic;
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+.container p {
+    text-shadow: 2px 2px 2px #030303;
+    font-style: italic;
+    font-size: x-small
+
+}
+
+#displayResult {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(29, 29, 29);
+    height: 100px;
+    width: 280px;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+#result {
+    font-size: 2rem;
+}
+
+#ageInput {
+    width: 100%;
+    border: none;
+    background-color: rgba(248, 248, 248, 0.4);
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    color: black;
+    font-size: x-small;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px rgba(26, 25, 25, 4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ageInput::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
+
+#ageInput:focus {
+    outline: none;
+    background-color: #fff;
+}
+
+.buttons {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons .refresh {
+    display: none;
+}
+
+.btn {
+    padding: 4px;
+    width: 100px;
+    border: none;
+    background-color: sandybrown;
+    margin: 4px;
+    color: rgb(19, 18, 18);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: rgb(29, 28, 28);
+    color: #fff;
+
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:active {
+    transform: scale(0.90);
+}
+
+#calcBtn {
+    color: #fff;
+    font-size: x-small;
+}
+
+#resetBtn {
+    color: #fff;
+    background-color: tan;
+    font-size: x-small;
+}
+
+#resetBtn:hover {
+    background-color: #030303;
+}
+
+.alert {
+    display: none;
+
+}
+
+/* if active is present */
+.alert.active {
+    display: block;
+}
+
+.alert2 {
+    display: none;
+
+}
+
+.alert2.active {
+    display: block;
+}
+
+.answer {
+    display: none;
+}
+.answer.active {
+    display: block;
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 60vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 80vw;
+    }
+    .container h1 {
+        font-size: x-large;
+    }
+}
+
+@media (max-width: 300px) {
+    .container {
+        width: 90vw;
+    }
+}
